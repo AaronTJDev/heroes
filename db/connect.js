@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 // Mongo connection
 mongoose.Promise = global.Promise;
@@ -14,4 +14,4 @@ const heroSchema = new mongoose.Schema({
 
 const Heros = mongoose.model('heros', heroSchema);
 
-export { Heros }
+module.exports = Heros;

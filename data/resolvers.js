@@ -1,7 +1,7 @@
-import { reject } from 'lodash';
-import { Heros } from '../db/connect';
+const { reject } = require('lodash');
+const { Heros } = require('../db/connect');
 
-export const resolvers = {
+const resolvers = {
     Query: {
         getHeros: () => {
             return Heros.find({});
@@ -17,3 +17,5 @@ export const resolvers = {
         }
     }
 }
+
+module.exports = resolvers;
