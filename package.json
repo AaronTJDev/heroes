@@ -1,5 +1,5 @@
 {
-  "name": "Backend for Hero List application",
+  "name": "hero-list-backend",
   "version": "1.0.0",
   "description": "graphQL backend for Aaron's Hero List application",
   "main": "index.js",
