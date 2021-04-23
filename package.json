@@ -1,0 +1,25 @@
+{
+  "name": "Backend for Hero List application",
+  "version": "1.0.0",
+  "description": "graphQL backend for Aaron's Hero List application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./index.js --exec babel-node && exit 1"
+  },
+  "author": "Aaron Jackson",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.5.0",
+    "graphql-tools": "^7.0.4",
+    "lodash": "^4.17.21",
+    "mongoose": "^5.11.18"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1"
+  }
+}
