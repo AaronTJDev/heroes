@@ -15,5 +15,5 @@ app.use('/api', graphqlHTTP({
 }))
 
 app.listen(port, () => {
-    console.log('Server running on localhost:8080')
+    console.log(`Server running on ${port}`);
 })
