@@ -1,8 +1,9 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 
 // Mongo connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb+srv://aaron-dev-0:NiMWn9CD7wcs82N@upmetrics-assessment-cl.dsky9.mongodb.net/heroDB?retryWrites=true&w=majority', {
+mongoose.connect(`${process.env.MONGO_URI}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -12,6 +13,6 @@ const heroSchema = new mongoose.Schema({
     comics: { type: Array }
 })
 
-const Heros = mongoose.model('heros', heroSchema);
+const Heroes = mongoose.model('heroes', heroSchema);
 
-module.exports = Heros;
+module.exports = Heroes;

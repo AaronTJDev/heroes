@@ -1,5 +1,5 @@
 const { makeExecutableSchema } = require('graphql-tools');
-const { resolvers } = require('./resolvers');
+const resolvers = require('./resolvers');
 
 const typeDefs = `
     type Hero {
@@ -18,7 +18,7 @@ const typeDefs = `
     }
 
     type Query {
-        getHeros: [Hero]
+        getHeroes: [Hero]
         getComicsByHeroId(id: ID): [Comic]
     }
 `
