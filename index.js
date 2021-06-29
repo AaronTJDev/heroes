@@ -3,13 +3,14 @@ const path = require('path');
 const express = require('express');
 const { graphqlHTTP } = require('express-graphql');
 const schema = require('./data/schema');
+const cors = require('cors');
 
 const app = express();
 const port = process.env.PORT || 8080;
 
 app.use(express.static(path.join(__dirname, '/dist')));
 
-app.use('/api', graphqlHTTP({
+app.use('/api', cors(), graphqlHTTP({
     schema: schema,
     graphiql: true
 }))
@@ -17,7 +18,6 @@ app.use('/api', graphqlHTTP({
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist', 'index.html'))
 });
-
 app.listen(port, () => {
     console.log(`Server running on ${port}`);
 })
